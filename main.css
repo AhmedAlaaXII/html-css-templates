@@ -1,0 +1,99 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.projects {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+.projects .project a {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  padding: 20px 10px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 50px;
+  border-radius: 10px;
+
+  background-color: rgb(87, 87, 87);
+  color: white;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.projects .project a:visited {
+  color: white;
+  transition: 0.3s;
+}
+.projects .project a::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  left: -100%;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -1;
+  transition: 0.3s;
+}
+.projects .project a::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  right: -100%;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -1;
+  transition: 0.3s;
+}
+.projects .project:hover a::after {
+  left: 0px;
+  top: 0px;
+}
+.projects .project:hover a::before {
+  right: 0px;
+  top: 0px;
+}
+.projects .project:hover a {
+  color: black;
+}
+.projects .project:hover a:visited {
+  color: black;
+}
